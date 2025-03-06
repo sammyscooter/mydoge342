@@ -29,13 +29,13 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "run start.sh"
+        run: "npm install && node index.js"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "sammyscoote-mydoge342-22"
-          entrypoint: "index.js"
+          entrypoint: "start.sh"
           root: ""
           
           
